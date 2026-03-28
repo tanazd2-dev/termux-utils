@@ -7,7 +7,7 @@ BIN_DIR="$PREFIX/bin"
 BASE_URL="https://raw.githubusercontent.com/tanazd1/termux-miscellaneous/main"
 
 # 🔥 DEFINE FILES HERE (IMPORTANT)
-FILES="c cdt ns su tc tct x"
+FILES="c cdt exe! lock ns r su tc tct x"
 
 for cmd in $FILES; do
     echo "[*] Installing $cmd..."
