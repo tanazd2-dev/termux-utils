@@ -1,0 +1,36 @@
+name: Auto Update Social Preview
+
+on:
+  push:
+    branches:
+      - main
+  release:
+    types:
+      - published
+
+jobs:
+  update-social-preview:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Checkout repo
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2️⃣ Download the GitHub Open Graph preview image
+      - name: Fetch GitHub Open Graph preview
+        run: |
+          REPO_OWNER="tanazd2"
+          REPO_NAME="termux-utils"
+          PREVIEW_URL="https://opengraph.githubassets.com/1/${REPO_OWNER}/${REPO_NAME}"
+          mkdir -p .github
+          curl -L "$PREVIEW_URL" -o .github/social-preview.png
+
+      # 3️⃣ Commit & push if image changed
+      - name: Commit and push social preview
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .github/social-preview.png
+          git commit -m "Auto-update social preview [skip ci]" || echo "No changes to commit"
+          git push
