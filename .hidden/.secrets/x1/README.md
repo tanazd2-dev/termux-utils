@@ -2,7 +2,7 @@ This is in a directory with Demo picture of `c` and `x` working.
 
 **PLEASE DO NOT CHANGE ANYTHING IN ```.hidden/```.
 
-Also, ***PEASE DO NOT REPLACE THE REAL `$PREFIX/bin/uname` WITH THIS FAKE ```uname``` in the root of the repository.
+Also, **PLEASE DO NOT REPLACE THE REAL `$PREFIX/bin/uname` WITH THIS FAKE ```uname``` IN THE ROOT OF THIS REPO.```
 
 instead, do this.
 
