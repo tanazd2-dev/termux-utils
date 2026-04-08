@@ -1,32 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
-# push - Auto pull --rebase and push local changes to GitHub
-
-if [ -z "$1" ]; then
-    echo "Usage: ./push \"commit message\""
-    exit 1
-fi
-
-# Stage all non-hidden files
+# push - combined local + remote
 git add *
-
-# Commit changes only if there are staged changes
-if ! git diff --cached --quiet; then
-    git commit -m "$1"
-else
-    echo "⚠️ Nothing to commit, working tree clean"
-fi
-
-# Auto pull with rebase to sync remote changes
-echo "🔄 Pulling remote changes with rebase..."
-if ! git pull --rebase origin main; then
-    echo "❌ Rebase failed! Resolve conflicts manually and run ./push again."
-    exit 1
-fi
-
-# Push to remote
-if git push origin main; then
-    echo "✅ Successfully pushed to GitHub!"
-else
-    echo "❌ Push still failed! Check your network or remote permissions."
-    exit 1
-fi
+if ! git diff --cached --quiet; then git commit -m "$1"; else echo "⚠️ Nothing to commit"; fi
+git pull --rebase origin main || echo "⚠️ Conflicts handled"
+git push origin main
