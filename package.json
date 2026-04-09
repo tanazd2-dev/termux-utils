@@ -27,5 +27,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@tanazd2/termux-utils": "^18.0.0"
   }
 }

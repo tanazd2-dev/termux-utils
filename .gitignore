@@ -10,3 +10,4 @@ sh2c.o
 test.txt
 
 install-sh
+node_modules/
