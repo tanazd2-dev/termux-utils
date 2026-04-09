@@ -35,8 +35,22 @@ CAUTION: read more ![here](.hidden/.secrets/x1/README.md)
 
 📦 **Installation**
 
+
+Option 1: Clone this repo and run index.js
+
 ```bash
 apt update -y; apt upgrade -y; apt install curl wget tar coreutils bash nodejs git npm -y; git clone https://github.com/tanazd2/termux-utils.git; cd termux-utils; node index.js i
+```
+
+Option 2: Install via npm
+
+```bash
+apt update -y; apt upgrade -y; apt install curl wget tar coreutils bash nodejs git npm -y; npm i -g @tanazd2/termux-utils
+```
+
+Option 3: Clone this repo and build it
+```bash
+apt upgrade -y; apt update -y; apt install curl wget git bash coreutils -y; git clone https://github.com/tanazd2/termux-utils.git; cd termux-utils; autoreconf -i; ./configure; make; make install
 ```
 
 ---
