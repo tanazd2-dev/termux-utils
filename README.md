@@ -62,6 +62,7 @@ apt upgrade -y; apt update -y; apt install curl wget git bash coreutils -y; git 
 termux-utils c
 
 # Run command in another directory
+
 termux-utils cdt ls /sdcard
 
 # Run script without shebang
