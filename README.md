@@ -1,5 +1,5 @@
 NOTE. THE REPO WAS ARCHIVED FROM HOW CORRUPTED IT IS
-
+PLZ HELP US BY CLONING THIS REPO AND FIXING INDEX.JS
 
 ![Demo of C shell and x working](.hidden/.secrets/x1/Demo.png)
 
@@ -39,16 +39,11 @@ CAUTION: read more ![here](.hidden/.secrets/x1/README.md)
 
 📦 **Installation**
 
-```bash
-apt update -y; apt upgrade -y; apt install curl wget tar coreutils bash nodejs git npm -y; git clone https://github.com/tanazd2/termux-utils.git; cd termux-utils
-```
-
----
 
 🧪 **Examples**
 
 ```bash
-# Start custom shell
+
 termux-utils c
 
 # Run command in another directory
